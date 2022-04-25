@@ -1,0 +1,49 @@
+@mixin flexCenterColumn($flow: column-reverse) {
+  display: flex;
+  flex-flow: $flow wrap;
+  align-items: center;
+  align-content: space-between;
+
+}
+
+@mixin fontCenter($size: 1rem) {
+  text-align: center;
+  font-size: $size;
+  padding: $size;
+}
+
+header {
+  $gap: 5rem;
+  width: 100%;
+  background: url("../../assets/images/header-background.jpg") no-repeat;
+  background-size: cover;
+  @include flexCenterColumn;
+  column-gap: 5rem;
+  padding: $gap 1rem;
+
+  .avatar {
+    flex: 1;
+    border-radius: 50%; // 0 0 50%;
+    width: 70%;
+  }
+
+  .information {
+    flex: 1;
+    @include flexCenterColumn($flow: column);
+
+    .name {
+      @include fontCenter($size: 3.5rem);
+    }
+
+    .description {
+      @include fontCenter($size: 1.6rem);
+    }
+  }
+
+}
+
+//.name{
+//}
+//.description{
+//
+//}

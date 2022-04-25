@@ -1,0 +1,12 @@
+{
+  "information": {
+    "name": "Piotr Kasperski",
+    "description": "I'm fullstack developer in love with Angular and Nestjs"
+  },
+  "language": {
+    "choose": "choose language"
+  },
+  "navigation": {
+    "technology": "technologies"
+  }
+}

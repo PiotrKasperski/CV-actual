@@ -1,0 +1,12 @@
+{
+  "information": {
+    "name": "Piotr Kasperski",
+    "description": "Jestem entuzjastą programowania zakochnym w Angularze i Nestjs-ie"
+  },
+  "language": {
+    "choose": "wybierz język"
+  },
+  "navigation": {
+    "technology": "technologie"
+  }
+}
