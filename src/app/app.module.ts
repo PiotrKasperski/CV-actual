@@ -12,6 +12,8 @@ import {SectionComponent} from './section/section.component';
 
 import {NgxPageScrollModule} from "ngx-page-scroll";
 import {NavigationComponent} from './navigation/navigation.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatSelectModule} from "@angular/material/select";
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http)
@@ -36,7 +38,9 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
         deps: [HttpClient]
       }
     }),
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    BrowserAnimationsModule,
+    MatSelectModule
 
   ],
   providers: [],

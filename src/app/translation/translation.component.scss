@@ -1,0 +1,17 @@
+.translations {
+  width: 10rem;
+  font-size: 0.9rem;
+  position: absolute;
+  right: 5rem;
+  display: flex;
+  justify-content: flex-end;
+
+  .label {
+    width: 10rem;
+    font-size: 0.7rem;
+
+    .select {
+      font-size: 0.9rem;
+    }
+  }
+}

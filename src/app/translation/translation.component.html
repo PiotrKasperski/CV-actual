@@ -1,8 +1,7 @@
-<label>
-  {{'language.choose'|translate}}
-  <select (change)="onChanage($event)">
-    <option value="pl">Polski</option>
-    <option value="en">Angielski</option>
-  </select>
-</label>
-
+<div class="translations">
+  <mat-label class="label">{{'language.choose'|translate}}</mat-label>
+  <mat-select (change)="onChanage($event)" [(value)]="language" class="select">
+    <mat-option value="pl">Polski</mat-option>
+    <mat-option value="en">Angielski</mat-option>
+  </mat-select>
+</div>

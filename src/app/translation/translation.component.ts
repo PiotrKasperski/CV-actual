@@ -11,7 +11,7 @@ export class TranslationComponent implements OnInit {
   /*Setting up default language*/
   language: Translations = Translations.PL;
 
-  constructor(private translate: TranslateService) {
+  constructor(public translate: TranslateService) {
     translate.setDefaultLang(this.language);
     translate.use(this.language);
   }
@@ -19,9 +19,15 @@ export class TranslationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onChanage($event: Event) {
+  changeLanguage(language: Translations): void {
+    this.language = language;
+    this.translate.use(this.language);
+  }
+
+  onChanage($event: Event): void {
     let value = ($event.target as HTMLInputElement).value;
-    this.translate.use(value)
-    console.log(`Language changed to ${value}`)
+    value === 'pl' ?
+      this.changeLanguage(Translations.PL) :
+      this.changeLanguage(Translations.EN);
   }
 }
