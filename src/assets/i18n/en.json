@@ -7,6 +7,8 @@
     "choose": "choose language"
   },
   "navigation": {
-    "technology": "technologies"
+    "technology": "technologies",
+    "experience": "experience",
+    "projects": "projects"
   }
 }

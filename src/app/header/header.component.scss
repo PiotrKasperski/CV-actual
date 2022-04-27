@@ -20,6 +20,7 @@ header {
   @include flexCenterColumn;
   column-gap: 5rem;
   padding: $gap 1rem;
+  box-sizing: border-box;
 
   .avatar {
     flex: 1;

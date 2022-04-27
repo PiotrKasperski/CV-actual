@@ -1,10 +1,17 @@
-<nav id="nav">
-  <ul>
-    <li><a href="#technologies">Technologies</a></li>
-    <li><a href="#experience">experience</a></li>
-    <li><a href="#projects">projects</a></li>
-  </ul>
-</nav>
+<div class="nav">
+  <div (click)="isToggled=!isToggled" class="hamburger-button"></div>
+</div>
+<div class="content-wrapper">
+  <nav *ngIf="isToggled">
+    <ul>
+      <li><a href="#technologies">{{'navigation.technology'|translate}}</a></li>
+      <li><a href="#experience">{{'navigation.experience'|translate}}</a></li>
+      <li><a href="#projects">{{'navigation.projects'|translate}}</a></li>
+    </ul>
+  </nav>
+  <ng-content></ng-content>
+</div>
 
-<ng-content></ng-content>
+
+
 

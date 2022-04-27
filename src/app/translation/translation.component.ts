@@ -24,10 +24,23 @@ export class TranslationComponent implements OnInit {
     this.translate.use(this.language);
   }
 
-  onChanage($event: Event): void {
-    let value = ($event.target as HTMLInputElement).value;
+  value = 'value';
+  isToggled = false;
+
+  onChanage(value: string): void {
     value === 'pl' ?
       this.changeLanguage(Translations.PL) :
       this.changeLanguage(Translations.EN);
+  }
+
+  onOptionClick(value: string) {
+    this.onChanage(value)
+    this.value = value;
+    this.isToggled = !this.isToggled;
+  }
+
+  toggleMenu() {
+    this.isToggled = !this.isToggled;
+    console.log('toggle');
   }
 }

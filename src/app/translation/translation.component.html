@@ -1,7 +1,11 @@
 <div class="translations">
-  <mat-label class="label">{{'language.choose'|translate}}</mat-label>
-  <mat-select (change)="onChanage($event)" [(value)]="language" class="select">
-    <mat-option value="pl">Polski</mat-option>
-    <mat-option value="en">Angielski</mat-option>
-  </mat-select>
+  <div class="select-wrapper">
+    <div (click)="toggleMenu()" class="select">
+      {{ isToggled ? ('language.choose'|translate) : language === 'pl' ? 'polski' : 'english' }}
+    </div>
+    <div *ngIf="isToggled" class="options-wrapper">
+      <div (click)="onOptionClick('pl')" class="select-option">polski</div>
+      <div (click)="onOptionClick('en')" class="select-option">english</div>
+    </div>
+  </div>
 </div>
