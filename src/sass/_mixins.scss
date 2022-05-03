@@ -1,0 +1,37 @@
+@function colorPalate($color) {
+  $palete: white;
+  @if $color == dark {
+    $palete: black;
+  }
+  @if $color == light {
+    $palete: white;
+  }
+  @return $palete;
+}
+
+@mixin flexCenterColumn($flow: column-reverse) {
+  display: flex;
+  flex-flow: $flow wrap;
+  align-items: center;
+  align-content: center;
+
+}
+
+@mixin fontCenter($size: 1rem) {
+  text-align: center;
+  font-size: $size;
+  padding: $size;
+}
+
+@mixin icon($url: '', $color: colorPalate(dark)) {
+  -webkit-mask: url($url) no-repeat 100% 100%;
+  mask: url($url) no-repeat 100% 100%;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  background-color: $color;
+}
+
+@mixin star {
+  width: 1em;
+  height: 1em;
+}

@@ -1,16 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import "sass/variables";
+@import "sass/mixins";
 
-$glass: rgba(255, 255, 255, 0.2);
-$glass-icon: rgba(255, 255, 255, 0.3);
 
 html {
   font-size: 62.5%;
+  background-color: $background-color;
+  padding: 0;
+  margin: 0;
 
   body {
+    background-color: $background-color;
+    font-size: $font-size;
+    font-family: $font-family;
     padding: 0;
     margin: 0;
-    background: url("./assets/images/overlay.png"),
-    linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-
+    @include breakpoint(sm) {
+      $font-size: 20rem;
+    }
   }
 }

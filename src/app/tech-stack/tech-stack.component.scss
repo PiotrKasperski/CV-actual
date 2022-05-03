@@ -1,17 +1,18 @@
 .tech-stack {
-  font-size: 1rem;
+  $icon-size: 5em;
   display: flex;
   align-items: center;
   justify-content: space-around;
+
   .item {
-    height: 5em;
-    width: 5em;
+    height: $icon-size;
+    width: $icon-size;
     box-sizing: border-box;
 
     a {
       img {
-        height: 5em;
-        width: 5em;
+        height: $icon-size;
+        width: $icon-size;
       }
     }
 

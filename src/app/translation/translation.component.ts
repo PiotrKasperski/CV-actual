@@ -38,7 +38,6 @@ export class TranslationComponent implements OnInit {
     this.value = value;
     this.isToggled = !this.isToggled;
   }
-
   toggleMenu() {
     this.isToggled = !this.isToggled;
     console.log('toggle');

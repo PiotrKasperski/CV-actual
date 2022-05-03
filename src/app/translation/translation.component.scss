@@ -1,27 +1,39 @@
-$glass: rgba(255, 255, 255, 0.2);
-$glass-icon: rgba(255, 255, 255, 0.3);
+@import '/src/sass/variables';
+
+$translation-width: 15em;
 .translations {
-  font-size: 1rem;
+  z-index: 10;
+  height: 3em;
   position: absolute;
   right: 4.8em;
   top: 0.5em;
   display: flex;
   justify-content: flex-end;
 
+  @include breakpoint(sm) {
+    position: sticky;
+    top: 0;
+  }
+
   .select-wrapper {
+    width: $translation-width;
+
     .select {
-      padding: 1em 4em;
+      @include fontCenter($font-size);
+      height: 3em;
+      width: 100%;
+      //padding: 1em 4em;
       box-sizing: border-box;
-      background: url("../../assets/icons/translate_white_24dp.svg") no-repeat left 0.5em, center,
+      background: url("../../assets/icons/translate_white_24dp.svg") no-repeat left 1em center,
       url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center / 1.4em,
       linear-gradient(to left, $glass-icon 3em, $glass 3em);
-      color: white;
+      color: colorPalate(light);
       border-radius: 0.25em;
       box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
     }
 
     .options-wrapper {
-      width: 20em;
+      width: $translation-width;
       background: $glass;
       color: white;
       box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);

@@ -1,0 +1,13 @@
+@import '/src/sass/variables';
+@import '/src/sass/mixins';
+
+footer {
+  background: colorPalate(dark);
+  color: colorPalate(light);
+  @include flexCenterColumn(column);
+  align-content: center;
+
+  p {
+
+  }
+}

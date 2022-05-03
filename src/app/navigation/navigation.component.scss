@@ -1,9 +1,36 @@
-$glass: rgba(255, 255, 255, 0.2);
-$glass-icon: rgba(255, 255, 255, 0.3);
-$font-color: white;
+@import '/src/sass/variables';
+@import '/src/sass/mixins';
+
+@mixin nav-bar() {
+  @include breakpoint(sm) {
+    display: block;
+    position: sticky;
+    height: 3em;
+    right: 0;
+    top: 0;
+    padding: 0 1em 0 0;
+
+    color: $font-color;
+    width: 100%;
+    //bottom: 3.9em;
+    ul {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+    }
+  }
+}
+
+@mixin hideHamburger() {
+  @include breakpoint(sm) {
+    display: none;
+  }
+}
+
 .nav {
+  @include hideHamburger();
   box-sizing: border-box;
-  font-size: 1rem;
   position: absolute;
   right: 0.7em;
   top: 0.5em;
@@ -11,29 +38,34 @@ $font-color: white;
   justify-content: flex-end;
 
   .hamburger-button {
+    @include icon("../../assets/icons/menu_black_24dp.svg");
     padding: 1.7em;
-    //padding: 1em 4em;
     box-sizing: border-box;
-    background: url("../../assets/icons/menu_black_24dp.svg") no-repeat center, $glass;
     color: $font-color;
     border-radius: 0.25em;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   }
 }
 
+.display {
+}
+
 .content-wrapper {
   box-sizing: border-box;
-  width: 96%;
-  margin: 0 2%;
-  background: #f7f7f7;
+  width: 80%;
+  margin: 0% 10%;
+  background: $background-color;
+  @include breakpoint(sm) {
+    position: relative;
+    top: -3em;
+  }
 
   nav {
-    font-size: 1rem;
     position: absolute;
     color: $font-color;
     right: 0.7em;
     top: 3.9em;
-    background: $glass;
+    background: $background-color;
     border-radius: 0.25em;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 
@@ -64,5 +96,14 @@ $font-color: white;
         }
       }
     }
+  }
+
+  nav.display-none {
+    display: none;
+    @include nav-bar;
+  }
+
+  nav.display {
+    @include nav-bar;
   }
 }

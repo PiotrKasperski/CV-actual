@@ -1,0 +1,6 @@
+<div class="skills">
+  <div *ngFor="let skill of skills" class="item">
+    <div class="label">{{ skill.name |uppercase}}</div>
+    <app-rating [maxRate]="10" [rate]="skill.rating" [stars]="5"></app-rating>
+  </div>
+</div>

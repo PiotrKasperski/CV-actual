@@ -1,6 +1,6 @@
 {
   "information": {
-    "name": "Piotr Kasperski",
+    "name": "piotr kasperski",
     "description": "Jestem entuzjastą programowania zakochnym w Angularze i Nestjs-ie"
   },
   "language": {
@@ -9,6 +9,36 @@
   "navigation": {
     "technology": "technologie",
     "experience": "doświadczenie",
+    "skills": "umiejetności",
     "projects": "projekty"
+  },
+  "company": {
+    "yellow": {
+      "name": "yellow solutions",
+      "description": "Apka quizowa napissana w Ionic-u. Zawierała lokalną baze danych strworzoną przy pomocy lokiJs, pare pluginów cordowvy i inne"
+    }
+  },
+  "month": {
+    "1": "styczeń",
+    "3": "marzec",
+    "2": "luty",
+    "4": "kwiecień",
+    "5": "maj",
+    "6": "czerwiec",
+    "7": "lipiec",
+    "8": "sierpień",
+    "9": "wrzesień",
+    "10": "paźdiernik",
+    "11": "listopad",
+    "12": "grudzień"
+  },
+  "duration": {
+    "month": "miesięcy"
+  },
+  "project": {
+    "restrand": {
+      "name": "restrand",
+      "description": "aplikacja do losowanie restauracji,. Napisana pzy użyciu google api, 0auth, agular material"
+    }
   }
 }

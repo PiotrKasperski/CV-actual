@@ -1,0 +1,14 @@
+<div class="projects">
+  <div *ngFor="let item of projects" class="item">
+    <h1>{{(item.name)|translate|uppercase}} </h1>
+    <p>
+      {{(item.description)|translate}}
+    </p>
+    <a href="{{item.github}}">
+      <div class="github"></div>
+      {{item.github}}</a>
+    <a href="{{item.url}}">
+      <div class="site"></div>
+      {{item.url}}</a>
+  </div>
+</div>

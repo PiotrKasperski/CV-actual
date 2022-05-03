@@ -1,0 +1,29 @@
+@import '/src/sass/variables';
+@import '/src/sass/mixins';
+
+.projects {
+  .item {
+    @include flexCenterColumn($flow: column);
+
+    a {
+      color: $font-color;
+      display: flex;
+      justify-content: space-between;
+
+      .github {
+        width: 1em;
+        height: 1em;
+        box-sizing: border-box;
+        @include icon('https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg', $color: $font-color)
+      }
+
+      .site {
+        width: 1em;
+        height: 1em;
+        box-sizing: border-box;
+        @include icon('./../assets/icons/open_in_new.svg', $font-color)
+      }
+    }
+  }
+
+}

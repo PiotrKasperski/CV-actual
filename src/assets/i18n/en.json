@@ -1,6 +1,6 @@
 {
   "information": {
-    "name": "Piotr Kasperski",
+    "name": "piotr kasperski",
     "description": "I'm fullstack developer in love with Angular and Nestjs"
   },
   "language": {
@@ -9,6 +9,36 @@
   "navigation": {
     "technology": "technologies",
     "experience": "experience",
+    "skills": "skills",
     "projects": "projects"
+  },
+  "company": {
+    "yellow": {
+      "name": "yellow solutions",
+      "description": "quiiz app writen in Ionic. IIt contains local datebase, some of cordova pluginsand more stuffs."
+    }
+  },
+  "month": {
+    "1": "january",
+    "3": "march",
+    "2": "febuary",
+    "4": "april",
+    "5": "may",
+    "6": "june",
+    "7": "july",
+    "8": "august",
+    "9": "september",
+    "10": "october",
+    "11": "november",
+    "12": "december"
+  },
+  "duration": {
+    "month": "month"
+  },
+  "project": {
+    "restrand": {
+      "name": "restrand",
+      "description": "app created to draw restaurants. usage of google api, 0auth, and angular material "
+    }
   }
 }

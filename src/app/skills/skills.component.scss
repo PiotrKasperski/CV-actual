@@ -1,0 +1,41 @@
+@import '/src/sass/variables';
+@import '/src/sass/mixins';
+
+.skills {
+  display: flex;
+  flex-direction: column;
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1em 0;
+    box-sizing: border-box;
+    font-size: $font-size-l;
+
+    .rating {
+      display: flex;
+
+      .star {
+        @include star();
+        @include icon('./../assets/icons/grade_white_24dp.svg', $font-color);
+      }
+
+      .star-fill {
+        @include star();
+        @include icon(
+            './../assets/icons/star_rate_white_24dp_filled.svg',
+            $font-color
+        );
+      }
+
+      .star-half {
+        @include star();
+        @include icon(
+            './../assets/icons/star_half_white_24dp.svg',
+            $font-color
+        );
+      }
+    }
+  }
+}

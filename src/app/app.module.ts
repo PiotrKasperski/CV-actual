@@ -12,11 +12,13 @@ import {SectionComponent} from './section/section.component';
 
 import {NgxPageScrollModule} from "ngx-page-scroll";
 import {NavigationComponent} from './navigation/navigation.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatSelectModule} from "@angular/material/select";
-import {MatButtonModule} from "@angular/material/button";
-import {MatMenuModule} from "@angular/material/menu";
 import {TechStackComponent} from './tech-stack/tech-stack.component';
+import {RatingComponent} from './rating/rating.component';
+import {SkillsComponent} from './skills/skills.component';
+import {ExperienceComponent} from './experience/experience.component';
+import {MonthDatePipe} from './pipes/month-date.pipe';
+import {PojectsComponent} from './pojects/pojects.component';
+import {FooterComponent} from './footer/footer.component';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http)
@@ -29,7 +31,14 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     TranslationComponent,
     SectionComponent,
     NavigationComponent,
-    TechStackComponent
+    TechStackComponent,
+    RatingComponent,
+    SkillsComponent,
+    ExperienceComponent,
+    MonthDatePipe,
+    MonthDatePipe,
+    PojectsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -43,10 +52,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
       }
     }),
     NgxPageScrollModule,
-    BrowserAnimationsModule,
-    MatSelectModule,
-    MatButtonModule,
-    MatMenuModule
 
   ],
   providers: [],

@@ -1,0 +1,24 @@
+@import '/src/sass/variables';
+@import '/src/sass/mixins';
+
+.rating {
+  display: flex;
+
+  .star {
+    @include star();
+    @include icon('./../assets/icons/grade_white_24dp.svg', $font-color);
+  }
+
+  .star-fill {
+    @include star();
+    @include icon(
+        './../assets/icons/star_rate_white_24dp_filled.svg',
+        $font-color
+    );
+  }
+
+  .star-half {
+    @include star();
+    @include icon('./../assets/icons/star_half_white_24dp.svg', $font-color);
+  }
+}
