@@ -1,15 +1,16 @@
-<div [ngClass]="isToggled?'display':'display-none'" class="nav">
+<div [ngClass]="isToggled?'display':'display-none'" class="hamburger">
   <div (click)="isToggled=!isToggled" class="hamburger-button"></div>
 </div>
+<nav [ngClass]="isToggled?'display':'display-none'">
+  <ul>
+    <li><a href="#technologies">{{'navigation.technology'|translate}}</a></li>
+    <li><a href="#skills">{{'navigation.skills'|translate}}</a></li>
+    <li><a href="#experience">{{'navigation.experience'|translate}}</a></li>
+    <li><a href="#projects">{{'navigation.projects'|translate}}</a></li>
+  </ul>
+</nav>
 <div [ngClass]="isToggled?'display':'display-none'" class="content-wrapper">
-  <nav [ngClass]="isToggled?'display':'display-none'">
-    <ul>
-      <li><a href="#technologies">{{'navigation.technology'|translate}}</a></li>
-      <li><a href="#skills">{{'navigation.skills'|translate}}</a></li>
-      <li><a href="#experience">{{'navigation.experience'|translate}}</a></li>
-      <li><a href="#projects">{{'navigation.projects'|translate}}</a></li>
-    </ul>
-  </nav>
+
   <ng-content></ng-content>
 </div>
 

@@ -19,7 +19,6 @@ export class RatingComponent implements OnInit {
 
   ngOnInit() {
     if (this.stars == null) this.stars = this.maxRate;
-    //TODO: maxrate=stars
   }
 
   fullStarsCounter(): Array<any> {

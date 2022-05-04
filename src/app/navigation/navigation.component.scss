@@ -3,32 +3,30 @@
 
 @mixin nav-bar() {
   @include breakpoint(sm) {
-    display: block;
-    position: sticky;
-    height: 3em;
-    right: 0;
-    top: 0;
-    padding: 0 1em 0 0;
+    @include showNavBar;
+  }
+}
 
-    color: $font-color;
+@mixin showNavBar() {
+  display: block;
+  position: sticky;
+  height: 3em;
+  right: 0;
+  top: 0;
+  padding: 0 1em 0 0;
+  color: $font-color;
+  width: 100%;
+  //bottom: 3.9em;
+  ul {
     width: 100%;
-    //bottom: 3.9em;
-    ul {
-      width: 100%;
-      flex-direction: row;
-      justify-content: space-around;
-      align-content: center;
-    }
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
   }
 }
 
-@mixin hideHamburger() {
-  @include breakpoint(sm) {
-    display: none;
-  }
-}
 
-.nav {
+.hamburger {
   // @include hideHamburger();
   box-sizing: border-box;
   position: absolute;
@@ -45,6 +43,57 @@
     border-radius: 0.25em;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   }
+
+  @include breakpoint(sm) {
+    display: none;
+  }
+}
+
+nav {
+  background: colorPalate(dark);
+  $font-color: colorPalate(light);
+  position: absolute;
+  right: 0.7em;
+  top: 3.9em;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+
+  ul {
+    width: 15em;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: stretch;
+
+    li {
+      height: 3em;
+      display: flex;
+
+      &:hover {
+        background: $glass-icon;
+      }
+
+      a {
+        flex-grow: 1;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: $font-color;
+      }
+    }
+  }
+}
+
+nav.display-none {
+  @include nav-bar;
+  display: none;
+}
+
+nav.display {
+  @include nav-bar;
 }
 
 .content-wrapper {
@@ -52,55 +101,6 @@
   width: 80%;
   margin: 0% 10%;
   background: $background-color;
-  @include breakpoint(sm) {
-    position: relative;
-    top: -3em;
-  }
 
-  nav {
-    position: absolute;
-    color: $font-color;
-    right: 0.7em;
-    top: 3.9em;
-    background: pink;
-    border-radius: 0.25em;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 
-    ul {
-      width: 15em;
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-      justify-content: stretch;
-
-      li {
-        height: 3em;
-        display: flex;
-
-        &:hover {
-          background: $glass-icon;
-        }
-
-        a {
-          flex-grow: 1;
-          width: 100%;
-          height: 100%;
-          text-decoration: none;
-          color: $font-color;
-        }
-      }
-    }
-  }
-
-  nav.display-none {
-    display: none;
-    @include nav-bar;
-  }
-
-  nav.display {
-    @include nav-bar;
-  }
 }

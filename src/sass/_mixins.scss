@@ -8,6 +8,10 @@
   }
   @return $palete;
 }
+@mixin darkElement() {
+  background: colorPalate(dark);
+  $font-color: colorPalate(light);
+}
 
 @mixin flexCenterColumn($flow: column-reverse) {
   display: flex;
