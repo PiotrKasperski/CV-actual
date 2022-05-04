@@ -1,5 +1,5 @@
-@import '/src/sass/variables';
-
+//@import '/src/sass/variables';
+@import './../../sass/variables';
 
 header {
   @include flexCenterColumn();
@@ -13,7 +13,6 @@ header {
     flex-direction: row;
     padding: 0;
     margin: 0;
-
   }
 
   .avatar {
@@ -25,7 +24,6 @@ header {
       height: 100%;
       width: 50%;
     }
-
   }
   .information {
     flex: 1;
@@ -39,6 +37,4 @@ header {
       @include fontCenter($size: $font-size);
     }
   }
-
 }
-
