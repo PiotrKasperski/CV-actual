@@ -1,10 +1,10 @@
-@import "./mixins";
-@import "breakpoints";
+@import './mixins';
+@import './breakpoints';
 /*font seting*/
 $font-color: colorPalate(dark);
 $font-size: 1.4rem;
-$font-size-l: $font-size*2;
-$font-size-xl: $font-size*3;
+$font-size-l: $font-size * 2;
+$font-size-xl: $font-size * 3;
 $font-family: 'Rubik', sans-serif;
 
 $background-color: colorPalate(light);

@@ -1,5 +1,5 @@
-@import '/src/sass/variables';
-@import '/src/sass/mixins';
+/@import './../../sass/variables';
+//@import '/src/sass/mixins';
 
 @mixin nav-bar() {
   @include breakpoint(sm) {
@@ -38,16 +38,13 @@
   justify-content: flex-end;
 
   .hamburger-button {
-    @include icon("../../assets/icons/menu_black_24dp.svg");
+    @include icon('../../assets/icons/menu_black_24dp.svg');
     padding: 1.7em;
     box-sizing: border-box;
     color: $font-color;
     border-radius: 0.25em;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   }
-}
-
-.display {
 }
 
 .content-wrapper {
