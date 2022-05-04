@@ -29,7 +29,7 @@
 }
 
 .nav {
-  @include hideHamburger();
+  // @include hideHamburger();
   box-sizing: border-box;
   position: absolute;
   right: 0.7em;
@@ -38,7 +38,7 @@
   justify-content: flex-end;
 
   .hamburger-button {
-    @include icon('../../assets/icons/menu_black_24dp.svg');
+    @include icon('./../../assets/icons/menu_black_24dp.svg');
     padding: 1.7em;
     box-sizing: border-box;
     color: $font-color;
@@ -62,7 +62,7 @@
     color: $font-color;
     right: 0.7em;
     top: 3.9em;
-    background: $background-color;
+    background: pink;
     border-radius: 0.25em;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
 

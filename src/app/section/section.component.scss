@@ -1,11 +1,9 @@
-@import '/src/sass/variables';
-@import '/src/sass/mixins';
+@import './../../sass/variables';
 .section {
   padding: 1em;
   border-bottom: colorPalate(dark) solid 0.1rem;
 
   .divider {
     width: 98%;
-
   }
 }
