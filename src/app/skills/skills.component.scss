@@ -1,5 +1,4 @@
-@import '/src/sass/variables';
-@import '/src/sass/mixins';
+@import './../../sass/variables';
 
 .skills {
   display: flex;
@@ -24,16 +23,16 @@
       .star-fill {
         @include star();
         @include icon(
-            './../assets/icons/star_rate_white_24dp_filled.svg',
-            $font-color
+          './../assets/icons/star_rate_white_24dp_filled.svg',
+          $font-color
         );
       }
 
       .star-half {
         @include star();
         @include icon(
-            './../assets/icons/star_half_white_24dp.svg',
-            $font-color
+          './../assets/icons/star_half_white_24dp.svg',
+          $font-color
         );
       }
     }
