@@ -1,6 +1,4 @@
-@import '/src/sass/variables';
-@import '/src/sass/mixins';
-
+@import './../../sass/variables';
 footer {
   background: colorPalate(dark);
   color: colorPalate(light);
