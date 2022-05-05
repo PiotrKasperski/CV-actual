@@ -1,8 +1,23 @@
 @import './../../sass/variables';
 .section {
-  border-bottom: colorPalate(dark) solid 0.1rem;
+  border-top: colorPalate(dark) solid 0.1rem;
+  position: relative;
+  padding: 5em 0 10em 0;
+  box-sizing: border-box;
 
-  .divider {
-    width: 98%;
+  text-align: center;
+
+  h1.sectionTitle {
+
+
+    font-size: $font-size-xl;
+
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: -0.6em;
+    background-color: $background-color;
+
   }
 }

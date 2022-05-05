@@ -2,15 +2,20 @@
 
 .skills {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
   .item {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     padding: 1em 0;
     box-sizing: border-box;
-    font-size: $font-size-l;
+    font-size: $font-size;
+    width: 40vw;
+    @include breakpoint(sm) {
+      width: 30vw;
+    }
 
     .rating {
       display: flex;

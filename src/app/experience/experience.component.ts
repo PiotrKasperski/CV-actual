@@ -5,6 +5,7 @@ interface ExperienceItem {
   description: string;
   company: string;
   startDate: Date;
+  imgSrc: string;
 }
 
 @Component({
@@ -18,6 +19,7 @@ export class ExperienceComponent implements OnInit {
       company: 'company.yellow.name',
       startDate: new Date(2014, 3, 1),
       endDate: new Date(2014, 9, 31),
+      imgSrc: "assets/images/cyss.jpg",
       description:
         'company.yellow.description',
     },

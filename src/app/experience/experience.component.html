@@ -1,5 +1,6 @@
 <div class="experience">
   <div *ngFor="let item of experience" class="item">
+    <img src="{{item.imgSrc}}"/>
     <h1>{{ (item.company)|translate |uppercase}} </h1>
     <h2>{{(duration(item) + ' ' + ('duration.month'|translate))|uppercase }} </h2>
     <h2>({{(item.startDate)|monthDate |async|titlecase}}-{{(item.endDate)|monthDate|async|titlecase}})</h2>
