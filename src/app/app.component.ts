@@ -14,4 +14,5 @@ export class AppComponent {
   //TODO nice loking jobs and projects
   //TODO contact form
   //TODO save as PDF
+  //TODO auto hiide translation and nav list
 }

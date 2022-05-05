@@ -1,18 +1,19 @@
 @import './../../sass/variables';
 
-$translation-width: 15em;
+
 .translations {
   z-index: 10;
-  height: 3em;
+  height: $nav-bar-height;
   position: absolute;
   right: 4.8em;
   top: 0.5em;
   display: flex;
   justify-content: flex-end;
-
+  $font-color: colorPalate(light);
+  color: $font-color;
   @include breakpoint(sm) {
-    position: sticky;
-    top: 0;
+    right: 1em;
+    top: 1em;
   }
 
   .select-wrapper {
@@ -20,23 +21,16 @@ $translation-width: 15em;
 
     .select {
       @include fontCenter($font-size);
-      height: 3em;
       width: 100%;
-      //padding: 1em 4em;
       box-sizing: border-box;
-      background: url('../../assets/icons/translate_white_24dp.svg') no-repeat
-          left 1em center,
-        url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
-          no-repeat right 0.8em center / 1.4em,
-        linear-gradient(to left, $glass-icon 3em, $glass 3em);
-      color: colorPalate(light);
-      border-radius: 0.25em;
-      box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+      background: url('../../assets/icons/translate_white_24dp.svg') no-repeat left 1em center,
+      url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center / 1.4em,
+      colorPalate(dark);
     }
 
     .options-wrapper {
       width: $translation-width;
-      background: $glass;
+      background: colorPalate(dark);
       color: white;
       box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
     }
@@ -46,7 +40,8 @@ $translation-width: 15em;
       box-sizing: border-box;
 
       &:hover {
-        background: $glass-icon;
+        background: colorPalate(light);
+        color: colorPalate(dark);
       }
     }
   }

@@ -13,9 +13,9 @@
   $font-color: colorPalate(light);
 }
 
-@mixin flexCenterColumn($flow: column-reverse) {
+@mixin flexCenterColumn($flow: revert) {
   display: flex;
-  flex-flow: $flow wrap;
+  flex-flow: $flow;
   align-items: center;
   align-content: center;
 
@@ -33,6 +33,16 @@
   -webkit-mask-size: cover;
   mask-size: cover;
   background-color: $color;
+}
+
+@mixin square($width: 1em) {
+  width: $width;
+  height: $width;
+}
+
+@mixin maxSquareWidth($width: 1em) {
+  max-width: $width;
+  max-height: $width;
 }
 
 @mixin star {
