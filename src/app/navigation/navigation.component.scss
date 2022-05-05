@@ -1,4 +1,4 @@
-@import './../../sass/variables';
+@import './../../sass/_variables.scss';
 //@import '/src/sass/mixins';
 .app-navigation {
   bottom: -3em;
@@ -27,7 +27,6 @@
     align-content: center;
   }
 }
-
 
 .hamburger {
   // @include hideHamburger();
@@ -107,5 +106,4 @@ nav.display {
   @include breakpoint(sm) {
     max-width: 800px;
   }
-
 }
