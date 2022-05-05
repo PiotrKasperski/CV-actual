@@ -1,24 +1,27 @@
-import {Component, OnInit} from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
-import {Translations} from "./translations";
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Translations } from './translations';
 
 @Component({
   selector: 'app-translation',
   templateUrl: './translation.component.html',
-  styleUrls: ['./translation.component.scss']
+  styleUrls: ['./translation.component.scss'],
 })
 export class TranslationComponent implements OnInit {
   /*Setting up default language*/
-  language: Translations = Translations.PL;
+  language: Translations = Translations.EN;
 
   constructor(public translate: TranslateService) {
+    this.detectLanguage();
     translate.setDefaultLang(this.language);
     translate.use(this.language);
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  detectLanguage() {
+    if (navigator.language === 'pl-PL') this.language = Translations.PL;
+    else this.language = Translations.EN;
   }
-
   changeLanguage(language: Translations): void {
     this.language = language;
     this.translate.use(this.language);
@@ -28,13 +31,13 @@ export class TranslationComponent implements OnInit {
   isToggled = false;
 
   onChanage(value: string): void {
-    value === 'pl' ?
-      this.changeLanguage(Translations.PL) :
-      this.changeLanguage(Translations.EN);
+    value === 'pl'
+      ? this.changeLanguage(Translations.PL)
+      : this.changeLanguage(Translations.EN);
   }
 
   onOptionClick(value: string) {
-    this.onChanage(value)
+    this.onChanage(value);
     this.value = value;
     this.isToggled = !this.isToggled;
   }
