@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import html2canvas from 'html2canvas';
+declare let html2canvas: any;
 import jsPDF from 'jspdf';
 @Component({
   selector: 'app-pdf',

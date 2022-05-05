@@ -28,6 +28,7 @@
     "ngx-page-scroll-core": "^8.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "worker-thread": "^1.1.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
