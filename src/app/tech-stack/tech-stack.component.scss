@@ -1,19 +1,20 @@
 @import './../../sass/variables';
 .tech-stack {
-  $icon-size: 5em;
+  $icon-size: 30vw;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 
   .item {
-    height: $icon-size;
-    width: $icon-size;
+    @include square($icon-size);
+    @include maxSquareWidth(30vh);
     box-sizing: border-box;
 
     a {
       img {
-        height: $icon-size;
-        width: $icon-size;
+        @include square($icon-size);
+        @include maxSquareWidth(30vh);
       }
     }
 

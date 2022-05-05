@@ -15,4 +15,5 @@ export class AppComponent {
   //TODO contact form
   //TODO save as PDF
   //TODO auto hiide translation and nav list
+//  TODO detecting browser language
 }
