@@ -130,7 +130,7 @@ nav.display {
   box-sizing: border-box;
   width: 94vw;
   margin: 0 auto;
-  padding-top: 3em;
+  padding-top: 3em*2;
   background: $background-color;
   @include breakpoint(sm) {
     max-width: 800px;

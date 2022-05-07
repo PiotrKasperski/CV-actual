@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,11 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cv';
-  //TODO: header height 100%
-  //TODO: tech stack double lined
-  //TODO skilss in column
-  //TODO nice loking jobs and projects
+
+
+  //TODO skilss in column // dont wor on sm breakpoint
+  //TODO nice loking jobs and projects //in progres
   //TODO contact form
-  //TODO save as PDF
-  //TODO auto hiide translation and nav list
+  //TODO save as PDF //nice prin or smt
+  //TODO auto hiide translation and nav list //!important
+  //TODO: hide navbar when scrolling
+
+  /*TODO
+  * Animacja startowa:
+  * *mała omega*
+  * napis klonek zmniejszajacy się
+  * do młej grckiej omegi
+  * pojawiajacej się jako logo w blewym górnym rogu :D
+  * */
 }

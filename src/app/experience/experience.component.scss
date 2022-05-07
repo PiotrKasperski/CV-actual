@@ -1,21 +1,59 @@
 @import './../../sass/variables';
 
 .experience {
-  .item {
+  .item, .description {
     @include flexCenterColumn($flow: column);
     box-sizing: border-box;
 
-    h1 {
-      font-size: $font-size-l;
+    .company {
+      font-size: $font-size-xl;
+      font-style: normal;
+
     }
 
-    h2 {
-      font-size: $font-size * 1.5;
+    .time {
+      font-size: ($font-size+$font-size-l)/2; // mean value from  big and normal font
     }
 
     p {
       font-size: $font-size;
     }
+
   }
+
+  @include breakpoint(sm) {
+    .item {
+      flex-flow: row;
+
+      img {
+        width: 20%;
+        @include square(20vw);
+      }
+
+      .description {
+        width: 100%;
+        height: 100%;
+        flex-flow: row wrap;
+
+
+        .company {
+          flex-basis: 100%;
+
+
+        }
+
+        .time {
+          flex-basis: 100%;
+        }
+
+        p {
+          flex-basis: 100%;
+        }
+      }
+    }
+
+
+  }
+
 }
 

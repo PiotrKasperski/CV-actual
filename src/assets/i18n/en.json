@@ -14,7 +14,7 @@
   },
   "company": {
     "yellow": {
-      "name": "yellow solutions",
+      "name": "creative yellow solutions",
       "description": "quiiz app writen in Ionic. IIt contains local datebase, some of cordova pluginsand more stuffs."
     }
   },
@@ -33,7 +33,7 @@
     "12": "december"
   },
   "duration": {
-    "month": "month"
+    "month": "months"
   },
   "project": {
     "restrand": {

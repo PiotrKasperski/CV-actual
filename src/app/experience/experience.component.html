@@ -1,11 +1,17 @@
 <div class="experience">
   <div *ngFor="let item of experience" class="item">
     <img src="{{item.imgSrc}}"/>
-    <h1>{{ (item.company)|translate |uppercase}} </h1>
-    <h2>{{(duration(item) + ' ' + ('duration.month'|translate))|uppercase }} </h2>
-    <h2>({{(item.startDate)|monthDate |async|titlecase}}-{{(item.endDate)|monthDate|async|titlecase}})</h2>
-    <p>
-      {{(item.description)|translate}}
-    </p>
+    <div class="description">
+      <div class="company">
+        {{ (item.company)|translate |uppercase}}
+      </div>
+      <div class="time">{{(duration(item) + ' ' + ('duration.month'|translate))|uppercase }} </div>
+      <div class="time">({{(item.startDate)|monthDate |async|titlecase}}-{{(item.endDate)|monthDate|async|titlecase}})
+      </div>
+      <p>
+        {{(item.description)|translate}}
+      </p>
+    </div>
+
   </div>
 </div>
