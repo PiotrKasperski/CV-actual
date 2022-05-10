@@ -1,6 +1,6 @@
 # Cv
 
-In all others projects I'll use ready libraries like [a link](https://github.com/angular/components/README.md)
+In all others projects I'll use ready libraries like [a link](https://material.angular.io/)
 
 ## Development server
 
