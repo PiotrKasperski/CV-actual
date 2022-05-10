@@ -49,9 +49,8 @@ describe('TranslationComponent', () => {
   it('should change language', () => {
     let testValue = 'en';
     if (component.language === testValue) testValue = 'pl';
-    let mockEvent = {target: {value: testValue}};
-    // @ts-ignore
-    component.onChanage(mockEvent);
+
+    component.onChanage(testValue);
     expect(component.language).toBe(testValue)
   })
   it('should change translations', () => {

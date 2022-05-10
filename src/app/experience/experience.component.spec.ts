@@ -1,6 +1,21 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {ExperienceComponent} from './experience.component';
+import {Pipe, PipeTransform} from "@angular/core";
+
+@Pipe({name: 'translate'})
+class MockPipe implements PipeTransform {
+  transform(value: any): any {
+    return value
+  }
+}
+
+@Pipe({name: 'monthDate'})
+class MockDatePipe implements PipeTransform {
+  transform(value: any): any {
+    return value
+  }
+}
 
 describe('ExperienceComponent', () => {
   let component: ExperienceComponent;
@@ -8,7 +23,7 @@ describe('ExperienceComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ExperienceComponent]
+      declarations: [ExperienceComponent, MockPipe, MockDatePipe]
     })
       .compileComponents();
   });
