@@ -1,6 +1,7 @@
 # Cv
 
-In all others projects I'll use ready libraries like [a link](https://material.angular.io/)
+In all others projects I'll use ready libraries
+like [I realize how to change markdown's links name](https://material.angular.io/)
 
 ## Development server
 
