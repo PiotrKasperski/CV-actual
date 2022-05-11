@@ -1,7 +1,20 @@
 # Cv
 
-In all others projects I'll use ready libraries
-like [I realize how to change markdown's links name](https://material.angular.io/)
+Now it's time to describe this project, in all others projects I'll use ready libraries
+like [AngularMaterial](https://material.angular.io/) or [PrimeNg](https://github.com/primefaces/primeng/),
+but I'll show that i know HTML & CSS pretty well :D.
+
+//PLEAS DON'T BLAME ME FOR A FATAL DESIGN BUT I'M DEVELOPER NOT A DESIGNER, BUT I TRY DO ALL BY MYSELF!
+
+/**
+*THIS MESSAGE WILL COME ONLY WITH INIT README COMMIT.
+*IF YOU READ THIS YOU ARE TECHNICAL PERSON :d
+*THANKS GOD, BECAUSE YOU CAN SEND ME A FEEDBACK
+*ABOUT MY CODE AT KONTAKT@PIOTRKASPERSKI.PL
+*I THINK THIS TYPE OF COMMENT ARE OPENED ONLY BY PEOPLES WHOSE ARE INTERESTED IN MY TECHNICAL SKILLS,
+*SO I'M HONET WITH YOU
+*I WILL, CREATE THIS HONEST-TYPE COMMENT ONLY FOR ONE COMMIT TO CHECK YOURS INTEREST.
+**/
 
 ## Development server
 
